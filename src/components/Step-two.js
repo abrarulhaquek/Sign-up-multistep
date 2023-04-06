@@ -1,31 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 export default function Steptwo({ handleNextStep, handleBackStep, formData }) {
   const {
     register,
-    handleSubmit,watch,
+    handleSubmit, watch,
     setValue,
     formState: { errors },
   } = useForm({ defaultValues: formData });
-
+const [error, seterror] = useState()
   const [steptwo] = React.useState(localStorage?.steptwo ? JSON.parse(localStorage?.steptwo) : "");
 
   const password = React.useRef({});
   password.current = watch("Password", "");
 
   const onSubmit = (d) => {
-    console.log(d, "data");
-    localStorage['steptwo']=JSON.stringify(d);
-    handleNextStep();
+    console.log(d.Confirm, "data");
+    if (d.Confirm === d.Password) {
+      localStorage['steptwo'] = JSON.stringify(d);
+      handleNextStep();
+    } else (
+      // alert("Confirm password doesn't match your password")
+  seterror(<h3 className="errormsg">Confirm password doesn't match your password</h3>)
+    )
   };
 
-  React.useEffect(()=>{
+  React.useEffect(() => {
     for (const [key, value] of Object.entries(steptwo)) {
 
-      setValue(key,value);
+      setValue(key, value);
     }
-  },[steptwo , setValue])
+  }, [steptwo, setValue])
 
 
   return (
@@ -68,7 +73,8 @@ export default function Steptwo({ handleNextStep, handleBackStep, formData }) {
           />
           {errors.Confirm && (
             <h3 className="errormsg">{errors.Confirm.message}</h3>
-          )}
+          ) }
+          {error}
           <div className="flex">
             <button className="back-btn btn-1" onClick={handleBackStep} type="button">
               Back

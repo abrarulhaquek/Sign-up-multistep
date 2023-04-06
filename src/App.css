@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 
 body {
@@ -48,16 +47,18 @@ select {
   border: 1px solid #000000;
   border-radius: 5px;
 }
-input:focus , select:focus {
+
+input:focus,
+select:focus {
   border: none !important;
-  outline:1px solid #07B7EA;
+  outline: 1px solid #07B7EA;
 }
+
 option:checked {
   background-color: #07B7EA;
   color: white;
-  font-size: 16px;
-  padding: 10px;
 }
+
 
 .flex {
   display: flex;
@@ -105,9 +106,11 @@ option:checked {
   color: #07B7EA;
   text-decoration: none;
 }
-.firm-btn{
+
+.firm-btn {
   float: right;
 }
+
 .stepper {
   text-align: center;
 }
@@ -136,9 +139,11 @@ option:checked {
   color: red;
   font-size: 12px;
 }
-.error1{
+
+.error1 {
   line-height: 0.9 !important;
 }
+
 @media screen and (max-width : 400px) {
   .card {
     padding: 30px;
