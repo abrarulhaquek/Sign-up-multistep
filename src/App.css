@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+body {
+  background: #232333;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.card {
+  background: #F0F0F0;
+  border-radius: 12px;
+  padding: 60px;
+
+}
+
+img {
+  margin: auto;
+  display: block;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  color: #242424;
+}
+
+form {
+  display: grid;
+  gap: 5px;
+}
+
+label {
+  font-weight: 500;
+  font-size: 12px;
+  color: #232333;
+}
+
+input,
+select {
+  box-sizing: border-box;
+  padding: 12px 14px;
+  height: 41px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+input:focus , select:focus {
+  border: none !important;
+  outline:1px solid #07B7EA;
+}
+option:checked {
+  background-color: #07B7EA;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.flex {
+  display: flex;
+  gap: 10px;
+}
+
+.flex-input {
+  width: 145px;
+  margin-top: 8px;
+}
+
+.back-btn {
+  padding: 12px 40px;
+  height: 41px;
+  background: #FFFFFF;
+  border: 1px solid #D3D3D6;
+  border-radius: 5px;
+  color: #07B7EA;
+}
+
+.next-btn {
+  padding: 12px 40px;
+  height: 41px;
+  background: #232333;
+  border-radius: 5px;
+  color: #07B7EA;
+  margin-top: 5px;
+}
+
+.btn-1 {
+  width: fit-content;
+  padding: 12px 55px !important;
+  margin-top: 5px;
+}
+
+.login {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #666676;
+}
+
+.login-btn,
+.firm-btn {
+  color: #07B7EA;
+  text-decoration: none;
+}
+.firm-btn{
+  float: right;
+}
+.stepper {
+  text-align: center;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-flex;
+  margin: 5px;
+  background: white;
+}
+
+.active {
+  height: 8px;
+  width: 8px;
+  border: 1px solid #c5c1c1;
+}
+
+.dot-blue {
+  background-color: #07B7EA;
+}
+
+.errormsg {
+  line-height: 0;
+  color: red;
+  font-size: 12px;
+}
+.error1{
+  line-height: 0.9 !important;
+}
+@media screen and (max-width : 400px) {
+  .card {
+    padding: 30px;
+  }
+}
