@@ -25,7 +25,7 @@ export default function Stepthree({ handleNextStep, handleBackStep, formData }) 
 
             setValue(key, value);
         }
-    }, [steptwo])
+    }, [steptwo , setValue])
     return (
         <>
             <div className="card">

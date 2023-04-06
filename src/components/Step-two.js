@@ -25,7 +25,7 @@ export default function Steptwo({ handleNextStep, handleBackStep, formData }) {
 
       setValue(key,value);
     }
-  },[steptwo])
+  },[steptwo , setValue])
 
 
   return (

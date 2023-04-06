@@ -25,7 +25,7 @@ export default function Stepone({ handleNextStep, formData}) {
 
       setValue(key,value);
     }
-  },[steptwo])
+  },[steptwo , setValue])
   return (
     <>
       <div className="card">

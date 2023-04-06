@@ -25,7 +25,7 @@ import { useForm } from 'react-hook-form';
 
               setValue(key,value);
             }
-          },[steptwo])
+          },[steptwo , setValue])
     return (
         <>
             <div className="card">
